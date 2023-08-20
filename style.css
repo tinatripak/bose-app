@@ -1,0 +1,283 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap');
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  color: #292929;
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  line-height: 140%;
+  margin: 0;
+  min-width: 323px;
+}
+
+.header {
+  background-image: url(images/header.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  
+  height: 100vh;
+  box-sizing: border-box;
+  padding: 64px 120px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.header__top {
+  display: flex;
+  justify-content: space-between;
+}
+
+.header__title {
+  margin-top: 40px;
+  margin-bottom: 0;
+
+  font-size: 48px;
+  font-style: italic;
+  font-weight: 800;
+  line-height: 100%;
+  letter-spacing: -1.5px;
+}
+
+.menu {
+  background: #E8EFF9;
+  box-sizing: border-box;
+  height: 100vh;
+  padding: 64px 120px;
+  
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  transform: translateX(-100%);
+  transition: transform 500ms;
+}
+
+.menu:target {
+  transform: translateX(-0%);
+}
+
+.menu__top {
+  margin-bottom: 64px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav {
+  display: flex;
+  gap: 32px;
+  flex-direction: column;
+}
+
+.nav__link {
+  text-decoration: none;
+  color: #292929;
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 22px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.main {
+  background-color: white;
+  padding: 120px;
+}
+
+.recommended {
+  margin-bottom: 120px;
+}
+
+.recommended__title, .categories__title, .how-to-buy__title {
+  margin-top: 0;
+  margin-bottom: 64px;
+  font-size: 48px;
+  line-height: 100%;
+  font-weight: 700;
+  letter-spacing: -1.5px;
+}
+
+.recommended__title, .categories__title {
+  text-align: center;
+}
+
+.how-to-buy__title, .how-to-buy__content {
+  flex-basis: 50%;
+}
+
+.recommended__products {
+  display: flex;
+  gap: 24px;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.product {
+  flex-basis: 324px;
+}
+
+.product__photo {
+  margin-bottom: 32px;
+}
+
+.product__title {
+  margin-top: 0;
+  margin-bottom: 8px;
+  width: max-content;
+  font-size: 16px;
+}
+
+.product__category {
+  margin-top: 0;
+  margin-bottom: 12px;
+}
+
+.product__price {
+  margin: 0;
+  font-weight: 700;
+}
+.categories {
+  margin: 0 auto;
+  margin-bottom: 120px;
+  
+  max-width: 1020px;
+}
+
+.category {
+  margin-bottom: 64px;
+}
+
+.category__photos {
+  display: flex;
+  gap: 3%;
+  margin-bottom: 16px;
+}
+
+.category__title {
+  margin: 0;
+}
+
+.photo-wide {
+  width: 65%;
+}
+
+.photo-square {
+  width: 32%;
+}
+
+.how-to-buy {
+  max-width: 1020px;
+  margin: 0 auto;
+  display: flex;
+  gap: 24px;
+}
+
+.how-to-buy__advantages {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  margin-bottom: 40px;
+  font-weight: bold;
+}
+
+.footer {
+  position: sticky;
+  bottom: 0;
+  z-index: -1;
+  height: 460px;
+
+  background-image: url(images/footer.png);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+@media only screen and (max-width: 850px) {
+  .header{
+    background-image: url(images/header-sm.png);
+  }
+}
+@media only screen and (max-width: 750px) and (min-width: 600px)  {
+  .main {
+    padding: 120px 72px;
+  }
+
+  .header__title, .recommended__title, .categories__title, .how-to-buy__title{
+    font-size: 40px;
+  }
+
+  .header, .menu{
+    padding: 64px 72px 40px 72px;
+  }
+
+  .category__title{
+    font-size: 24px;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .how-to-buy{
+    display: block;
+  }
+
+  .main {
+    padding: 120px 20px;
+  }
+
+  .header__title, .recommended__title, .categories__title, .how-to-buy__title{
+    font-size: 32px;
+  }
+
+  .header, .menu{
+    padding: 32px 20px;
+  }
+
+  .category__title{
+    font-size: 16px;
+  }
+
+  .photo-wide {
+    width: 50%;
+    object-fit: cover;
+  }
+
+  .photo-wide:last-child{
+    object-position: 85% 15%;
+  }
+  
+  .photo-square {
+    width: 50%;
+  }
+
+  .header{
+    background-image: url(images/header-sm.png);
+    background-position: 20%;
+  }
+}
+
+@media only screen and (max-width: 350px) {
+  .main {
+    padding: 60px 10px;
+  }
+
+  .header__title, .recommended__title, .categories__title, .how-to-buy__title{
+    font-size: 30px;
+  }
+
+  .header, .menu{
+    padding: 24px 15px;
+  }
+
+  .category__title, .product__title, .product__price, .product__category{
+    font-size: 16px;
+    margin-left: 10px;
+  }
+}
