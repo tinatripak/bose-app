@@ -201,12 +201,12 @@ body {
   background-repeat: no-repeat;
 }
 
-@media only screen and (max-width: 850px) {
+@media (max-width: 850px) {
   .header{
     background-image: url(images/header-sm.png);
   }
 }
-@media only screen and (max-width: 750px) and (min-width: 600px)  {
+@media (max-width: 750px) and (min-width: 600px)  {
   .main {
     padding: 120px 72px;
   }
@@ -223,7 +223,7 @@ body {
     font-size: 24px;
   }
 }
-@media only screen and (max-width: 600px) {
+@media (max-width: 600px) {
   .how-to-buy{
     display: block;
   }
@@ -263,7 +263,7 @@ body {
   }
 }
 
-@media only screen and (max-width: 350px) {
+@media (max-width: 350px) {
   .main {
     padding: 60px 10px;
   }
