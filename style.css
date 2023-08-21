@@ -245,7 +245,7 @@ body {
   }
 
   .photo-wide {
-    width: 50%;
+    width: 48%;
     object-fit: cover;
   }
 
@@ -254,7 +254,7 @@ body {
   }
   
   .photo-square {
-    width: 50%;
+    width: 48%;
   }
 
   .header{
